@@ -25,7 +25,7 @@ VALIDATE(){
         echo -e "$R.....Failure $N"
         exit 1
     else
-        echo -r "$G.....Success $N"
+        echo -e "$G.....Success $N"
     fi    
 }
 
@@ -39,7 +39,7 @@ dnf install nodejs -y &>> $LOGFILE
 VALIDATE $? "node  js installed"
 
 id roboshop &>> $LOGFILE
-if [ $useradd -ne roboshop ]
+if [ $? -ne 0 ]
 then 
     echo -e "$G User doesn't exists creating new user $N"
     useradd roboshop &>> $LOGFILE
