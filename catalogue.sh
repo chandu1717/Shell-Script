@@ -13,19 +13,19 @@ N="\e[0m"
 
 if [ $USERID -ne 0 ]
 then 
-    echo -e "$2.....$R Error: You are not root user $N "
+    echo -e "$R Error: You are not root user $N "
     exit 1
 else
-    echo -e "$2.....$G Info: You are root user $N "
+    echo -e "$G Info: You are root user $N "
 fi
 
 VALIDATE(){
     if [ $1 -ne 0 ]
     then   
-        echo -e "$R.....Failure $N"
+        echo -e "$2.....$R.....Failure $N"
         exit 1
     else
-        echo -e "$G.....Success $N"
+        echo -e "$2.....$G.....Success $N"
     fi    
 }
 
