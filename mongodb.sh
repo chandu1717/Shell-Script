@@ -28,7 +28,7 @@ VALIDATE(){
     fi
 }
 
-cp /etc/centos/Shell-Script/mongo.repo /etc/yum.repos.d/mongo.repo &>> $LOGFILE
+cp mongo.repo /etc/yum.repos.d/mongo.repo &>> $LOGFILE
 VALIDATE $? "Copy mongo.repo "
 
 dnf install mongodb-org -y &>> $LOGFILE
