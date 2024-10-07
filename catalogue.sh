@@ -3,7 +3,7 @@
 USERID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
-LOGFILE=/tmp/$Script_Name-$TIMESTAMP.log
+LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 HOST_NAME=mongodb.devrob.online
 
 R="\e[31m"
