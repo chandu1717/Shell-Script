@@ -29,11 +29,6 @@ validate(){
     fi    
 }
 
-dnf module disable nodejs -y &>> $LOGFILE
-VALIDATE $? "node js module disabled"
-
-dnf module enable nodejs:20 -y &>> $LOGFILE
-VALIDATE $? "node  js module enabled"
 
 dnf install nodejs -y &>> $LOGFILE
 VALIDATE $? "node  js installed"
