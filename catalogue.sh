@@ -13,10 +13,10 @@ N="\e[0m"
 
 if [ $USERID -ne 0 ]
 then 
-    echo -e "$R Error: You are not root user $N "
+    echo -e "$2.....$R Error: You are not root user $N "
     exit 1
 else
-    echo -e "$G Info: You are root user $N "
+    echo -e "$2.....$G Info: You are root user $N "
 fi
 
 VALIDATE(){
